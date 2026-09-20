@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>www//;_jiachanraknene.mhu</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Quicksand:wght@500;600;700&display=swap');
+:root{--pink:#f5a8c7;--pink2:#ffd8e8;--pink3:#fff0f6;--ink:#5e4d56;--line:#e4bdce;--gray:#d8d8d8}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Quicksand,Arial,sans-serif;color:var(--ink)}
+body{background:
+ radial-gradient(circle,#f5d8e5 1px,transparent 1.5px) 0 0/18px 18px,
+ linear-gradient(135deg,#fff,#fff7fb)}
+button{font:inherit}
+.page{display:none;min-height:100vh;min-height:100svh;align-items:center;justify-content:center;padding:24px 14px;position:relative;overflow:hidden}
+.page.show{display:flex}
+.page:before,.page:after{content:"♡";position:absolute;color:#f6bfd6;font-size:60px;opacity:.45}
+.page:before{left:5%;top:9%}.page:after{right:7%;bottom:10%}
+.win{width:min(760px,94vw);background:#fff;border:2px solid #cdbac3;border-radius:18px;box-shadow:0 14px 35px #d5b6c433;overflow:hidden;position:relative;z-index:1}
+.titlebar{height:45px;border-bottom:2px solid #e6d8de;background:#fffafd;display:flex;align-items:center;padding:0 10px;gap:7px}
+.ctrl{width:14px;height:14px;border:1px solid #d6c4cc;background:#f7c1d6;display:inline-block}
+.url{margin:auto;background:#fff;border:1px solid #eadce2;border-radius:4px;padding:5px 16px;min-width:210px;text-align:center;font-size:11px;color:#927c85}
+.close{font-size:17px;color:#aa8795}
+.body{padding:30px 22px}
+.center{text-align:center}
+.bunny{font-size:74px;line-height:1;margin-top:-10px}
+.question-big{font-size:clamp(24px,6vw,43px);font-weight:700;line-height:1.15}
+.sub{font-size:13px;color:#9c7c8b;margin-top:8px}
+.btns{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+.btn{border:2px solid #d7b6c3;background:#fffdfd;box-shadow:0 3px 0 #e5d5dc;border-radius:5px;padding:10px 27px;font-weight:700;color:#63515a;cursor:pointer}
+.btn.pink{background:#f6aac8;color:#fff;border-color:#e897b9}
+.btn.gray{background:#d8d8d8;border-color:#c6c6c6;color:#555}
+.pixel{font-family:"DotGothic16",monospace;letter-spacing:1px}
+.notice{padding:24px;text-align:center}
+.heartrow{display:flex;justify-content:space-between;color:#f4a5c5;font-size:55px}
+.notice h1{font-size:clamp(22px,5vw,36px);margin:8px 0 12px}
+.bottle{font-size:76px;filter:drop-shadow(0 4px 0 #d9f4ff)}
+.drinktext{font-size:clamp(19px,4.7vw,31px);font-weight:700;line-height:1.3}
+.card{width:min(740px,94vw);background:#fff;border:2px solid #d9cbd1;border-radius:20px;padding:20px;box-shadow:0 14px 35px #d5b6c433;position:relative;z-index:1}
+.cardtop{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.cardtop .url{flex:1}
+.profile{display:grid;grid-template-columns:minmax(220px,1fr) minmax(220px,1fr);gap:24px;align-items:center}
+.photo{aspect-ratio:1/1;overflow:hidden;border:8px solid white;box-shadow:0 4px 15px #ad829233;background:#f9eef4}
+.photo img{width:100%;height:100%;object-fit:cover}
+.info{display:grid;gap:14px}
+.field{background:linear-gradient(90deg,#f8cadb,#ffe9f1);padding:12px 17px;border-radius:18px}
+.field small{display:block;font-size:11px;color:#967383}.field b{font-size:16px}
+.tap{border:0;background:none;color:#c0839d;text-decoration:underline;margin:22px auto 0;display:block;cursor:pointer;font-weight:700}
+.menu{width:min(650px,94vw);position:relative;z-index:1}
+.menu .questionbox{background:#fff;border:2px solid #ded5da;border-radius:20px;padding:22px;box-shadow:0 14px 35px #d5b6c433}
+.menu h2{text-align:center;font-size:clamp(21px,5vw,32px);margin:4px 0 18px}
+.choice{width:100%;margin:9px 0;padding:13px;border:2px solid #efb5cc;background:#f8b5d1;color:#fff;border-radius:12px;cursor:pointer;font-weight:700;box-shadow:0 3px 0 #e3ccd5}
+.choice:hover{transform:translateY(-1px)}
+.err{font-size:12px;color:#aa7e8d;text-align:center;margin-top:12px}
+.celebrate{width:min(700px,94vw);background:#fff;border:2px solid #d9cbd1;border-radius:20px;padding:34px 24px;text-align:center;box-shadow:0 14px 35px #d5b6c433;position:relative;z-index:1}
+.celebrate h1{font-size:clamp(28px,7vw,50px);margin:0;color:#bd7f99}
+.celebrate p{font-size:clamp(15px,4vw,19px);line-height:1.85;white-space:pre-line}
+.last{margin-top:18px}
+.final{width:min(760px,94vw);background:#fff;border:2px solid #d9d1d7;border-radius:18px;overflow:hidden;box-shadow:0 18px 45px #d5b6c433;position:relative;z-index:1}
+.browser{height:48px;background:#fafafa;border-bottom:1px solid #e4dde1;display:flex;align-items:center;gap:8px;padding:0 10px}
+.browser .search{flex:1;background:#f1eef0;border-radius:8px;padding:7px 12px;color:#776972;font-size:11px;overflow:hidden;white-space:nowrap}
+.finalbody{padding:20px;background:
+ radial-gradient(circle at 8% 18%,#f7d8e744 0 38px,transparent 39px),
+ radial-gradient(circle at 90% 10%,#eadcf355 0 48px,transparent 49px),
+ linear-gradient(#fff,#fff7fb)}
+.finalpic{width:100%;aspect-ratio:1.5;overflow:hidden;border:5px solid #fff;box-shadow:0 5px 15px #9f7d8a22}
+.finalpic img{width:100%;height:100%;object-fit:cover}
+.handle{text-align:center;font-size:23px;font-weight:700;margin:16px 0;color:#725963}
+.heart{width:48px;height:48px;border-radius:50%;background:#f4aac8;color:#fff;display:grid;place-items:center;margin:-8px auto 12px;font-size:25px}
+.message{background:#ffd8e8;border-radius:4px;padding:22px;line-height:1.85;font-size:14px;white-space:pre-line}
+.footer{text-align:center;font-size:10px;color:#a98997;margin-top:13px}
+@media(max-width:620px){.profile{grid-template-columns:1fr}.photo{width:min(310px,100%);margin:auto}.body{padding:24px 14px}.card{padding:15px}}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page show" id="p1">
+ <div class="win">
+  <div class="titlebar"><span class="ctrl"></span><span class="ctrl"></span><span class="ctrl"></span><div class="url">www//;_jiachanraknene.mhu</div><span class="close">×</span></div>
+  <div class="body center">
+   <div class="bunny">🐰</div>
+   <div class="question-big">Is this your birthday?</div>
+   <div class="sub">นี่คือวันเกิดของคุณหรือไม่คะ ?</div>
+   <div class="btns">
+    <button class="btn" onclick="go(2)">NO</button>
+    <button class="btn" onclick="go(3)">YES</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="p2">
+ <div class="win">
+  <div class="titlebar"><span class="ctrl"></span><span class="ctrl"></span><span class="ctrl"></span><div class="url">NOTICE</div></div>
+  <div class="notice">
+   <div class="heartrow"><span>♡</span><span>♡</span></div>
+   <div class="pixel" style="color:#b8aab0">NOTICE</div>
+   <h1>Sorry, you don't have access<br>to your gift, Jia.</h1>
+   <div class="sub">เสียใจด้วยคุณไม่มีสิทธิ์เข้าถึงของขวัญของคุณเจียค่ะ</div>
+  </div>
+ </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="p3">
+ <div class="win">
+  <div class="titlebar"><span class="ctrl"></span><span class="ctrl"></span><span class="ctrl"></span><div class="url">♡ A MESSAGE FOR YOU</div></div>
+  <div class="notice">
+   <div class="bottle">🧴</div>
+   <div class="pixel" style="color:#ff9fbd">♡ STAY HYDRATED ♡</div>
+   <h1 class="drinktext">Drink some water to prepare<br>for your gift!</h1>
+   <div class="sub">ดื่มน้ำเพื่อเตรียมตัวรับของขวัญได้เลยค่ะ</div>
+   <div class="btns"><button class="btn pink" onclick="go(4)">OK</button></div>
+  </div>
+ </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="p4">
+ <div class="card">
+  <div class="cardtop"><span class="ctrl"></span><span class="ctrl"></span><span class="ctrl"></span><div class="url">www.mylove.com</div><span style="color:#eea9c5">♡</span></div>
+  <div class="profile">
+   <div class="photo"><img src="assets/nene.jpg" alt="Nenechan"></div>
+   <div class="info">
+    <div class="field"><small>name:</small><b>Nenechan</b></div>
+    <div class="field"><small>id #:</small><b>20.09.2011</b></div>
+    <div class="field"><small>from:</small><b>คุณหนูเจียจัง</b></div>
+   </div>
+  </div>
+  <button class="tap" onclick="go(5)">tap for next ♡</button>
+ </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page" id="p5">
+ <div class="menu">
+  <div class="questionbox">
+   <div class="pixel" style="text-align:center;color:#c895aa">♡ BIRTHDAY QUIZ ♡</div>
+   <h2>คุณเจียเกิดวันที่เท่าไหร่<br>คุณทราบหรือไม่ ?</h2>
+   <button class="choice" onclick="correct()">ตัวเลือก 1 · 19.07.2009</button>
+   <button class="choice" onclick="wrong()">ตัวเลือก 2 · 19.08.2009</button>
+   <button class="choice" onclick="wrong()">ตัวเลือก 3 · 19.07.2010</button>
+   <div class="err">choose carefully ♡</div>
+  </div>
+ </div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page" id="p6">
+ <div class="celebrate">
+  <div style="font-size:28px;color:#efabc6">♡ ♡ ♡</div>
+  <h1>Happy Birthday, Nene!</h1>
+  <p>สุขสันต์วันเกิดเนเน่ ขอให้มีความสุขมากๆ
+ขอให้มีวันที่ดีทุกวัน ขอให้ไม่ฝันร้าย
+และขอให้เธอเติบโตอย่างดี</p>
+  <p style="font-size:16px">I wish you so much happiness.
+May you have good days every day.
+I hope you never have nightmares,
+and I hope you grow into a wonderful person.</p>
+  <button class="btn gray last" onclick="go(7)">last</button>
+ </div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page" id="p7">
+ <div class="final">
+  <div class="browser"><span class="ctrl"></span><span class="ctrl"></span><span class="ctrl"></span><div class="search">www//;_jiachanraknene.mhu</div><span style="color:#efacc7">♡</span><span style="color:#efacc7">♡</span></div>
+  <div class="finalbody">
+   <div class="finalpic"><img src="assets/nene.jpg" alt="Nene"></div>
+   <div class="heart">♥</div>
+   <div class="handle">@emhu๋nene</div>
+   <div class="message">แฮป ๆ เนเน่จัง เจียรักเนเน่มากมากเลยนะ ขอให้เป็นปีที่ดี
+ขอบคุณที่โตมาเป็นน้อง เป็นเพื่อน ที่น่ารักกับเจียตลอดเลยนะ
+ขอให้ไม่โชคร้ายในความรักอีก ขอให้มีคนดีดีเข้ามาทำให้เนเน่สดใสอีกเยอะ ๆ
+เจียรักเน่มากมากนะ ไม่อยากให้เนเน่เสียใจเลยสักนิด
+ขอบคุณที่โตมาอย่างดีเสมอมาเลย
+ไว้เราไปเที่ยวด้วยกันนะเน่
+รักมึงที่สุดเลยอีอ้วล 🐽🐷♥️</div>
+   <div class="footer">made with ♡ by คุณหนูเจียจัง</div>
+  </div>
+ </div>
+</section>
+
+<script>
+function go(n){
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));
+ document.getElementById('p'+n).classList.add('show');
+ window.scrollTo(0,0);
+}
+function wrong(){go(2)}
+function correct(){go(6)}
+</script>
+</body>
+</html>
